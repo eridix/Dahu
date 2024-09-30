@@ -1,6 +1,39 @@
 # SAE5-DAHU
+Cloner le projet
 
+1ère console lancement backend
+cd backend/api-platform/api-dahu/
+composer update
+mkdir migrations
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+symfony server:start
 
+2eme console lancement base de donée mysql sur un docker
+cd docker-bd/
+docker-compose up -d
+
+3eme console lancement front-end
+cd Front\ end/dahu/
+npm i
+npm update
+ng serve --open
+
+Lancer les tests cypress
+cd Front\ end/dahu/
+npx cypress open
+
+Lancer application mobile android
+Ouvrir Android Studio seulement avec le dosier Front\ end/dahu/android
+Executer (normalemnt il y a rien besoin de faire d'autre)
+
+Rebuild application mobile android
+npm install @capacitor/cli --save-dev
+npm install @capacitor/ios @capacitor/android
+npx cap add android
+ng build && npx cap sync
+
+# PS:
 Install dependance Angular:
 npm list :
 
