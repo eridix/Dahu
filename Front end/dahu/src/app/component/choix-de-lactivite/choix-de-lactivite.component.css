@@ -1,0 +1,117 @@
+.cadre-result{
+    margin-left: 3%;
+    padding-bottom: 2%;
+}
+
+
+app-activite{
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 250px;
+    
+    background-color: var(--base);
+    text-align: center;
+}
+
+.cadre-filtre{
+    min-height: 32em;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.page{
+    display: flex;
+    margin: auto 7%;
+    /*position:fixed;*/
+}
+
+
+
+/* switch button */
+
+#switch-div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 100px;
+  }
+  
+  .switch {
+      position: relative;
+      display: inline-block;
+      width: 150px;
+      height: 60px;
+      padding: 2px;
+    }
+    
+    .switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    
+    
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+    
+    .slider {
+      border-radius: 34px;
+    }
+    
+    .slider:before {
+      border-radius: 50%;
+    }
+  
+    .switch-item {
+        position: absolute;
+        left: 5px;
+        right: auto;
+        top: 5px;
+        height: 50px;
+        color: var(--base);
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+  
+    input:checked + .slider .switch-item {
+      left: auto;
+      right: 5px;
+    }
+  
+    p{
+      font-family: var(--font-navbar);
+    }
+
+    .slider div p{
+      margin: auto 10px;
+    }
+    .slider div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 45px;
+        width: 130px;
+        margin: 7.5px;
+        border-radius: 50px;
+    }
+
+    .switch input:focus + .slider {
+        box-shadow: none;
+    }
+

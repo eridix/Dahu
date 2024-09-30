@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  db:
+    build: .
+    environment:
+      - MYSQL_DATABASE=test_api
+      - MYSQL_USER=test_api
+      - MYSQL_PASSWORD=nouveau_mot_de_passe
+      - MYSQL_ROOT_PASSWORD=root_mdp
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./data-dump:/docker-entrypoint-initdb.d

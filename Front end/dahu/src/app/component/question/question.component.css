@@ -1,0 +1,98 @@
+.questions_publies input {
+    border-radius : 5px;
+}
+
+.contenu {
+    border-top :  1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: -1px;
+    position:relative;
+    
+    width : 100%;
+}
+
+.individu {
+    display: flex;
+    margin: 10px;
+}
+
+.question, .case_rep {
+    margin-left : 10px;
+}
+.petite_case {
+    width : 100%;
+}
+
+.espace {
+    background-color: #EBE6E9;
+    height: 150px;
+}
+
+.reponse {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 30px;
+    display: none;
+}
+
+.show-response {
+    display: flex;
+}
+
+.pseudo {
+    font-weight: bold;
+    margin-right: 5px;
+    display : flex;
+    align-items: center;
+}
+
+.case_rep {
+    display : flex;
+    align-items: center;
+}
+
+
+.case_rep input {
+    margin-top:5px;
+    width : 95%;
+}
+
+.note_left {
+    display : flex;
+    flex-direction: column;
+    margin : 10px;
+}
+
+.note_left span {
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.note_left input {
+    border-radius: 5px;
+    height: 50px;
+    width : 95%;
+}
+
+
+
+/* Style des boutons */
+.toggle-response-button, .question-perso button {
+    background-color: var(--transp-pink); /* Couleur de fond */
+    color: black; /* Couleur du texte */
+    padding: 10px;/* Espacement intérieur */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur au survol */
+    margin : 10px;
+    position: relative;
+    left : 50%;
+    transform : translateX(-50%);
+  
+    /* Ajoutez d'autres styles selon vos préférences */
+  }
+  
+  /* Style au survol */
+  .toggle-response-button:hover, .question-perso button {
+    background-color: var(--second-pink);
+  }

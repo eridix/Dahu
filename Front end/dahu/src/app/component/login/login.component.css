@@ -1,0 +1,92 @@
+/* Styles for the login form */
+
+h2 {
+  text-align: center;
+  font-family: var(--font-navbar) !important;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+}
+
+mat-dialog-content {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #000000;
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+}
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.data {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+  font-family: var(--font-input);
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+
+button {
+  color: #ffffff;
+  font-weight: 700;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+  background-color: rgba(27, 95, 108, 0.88);
+  outline: none;
+}
+
+.signup-link {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.forgot-pass {
+  text-align: left;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.forgot-pass a {
+  text-decoration: none;
+  color: #0000ff;
+}
+
+.signup-link {
+  color: black;
+}
+
+.signup-link a {
+  text-decoration: none;
+  color: #0000ff;
+  cursor: pointer;
+}
+
+.signup-link a:hover{
+  text-decoration: underline;
+}
+
+.trait-horizontal {
+  border-bottom: 1px solid #000; /* Couleur et épaisseur du trait */
+  margin-bottom: 10px; /* Espacement en bas du trait */
+}

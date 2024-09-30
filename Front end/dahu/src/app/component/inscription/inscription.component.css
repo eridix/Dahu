@@ -1,0 +1,147 @@
+
+h2 {
+  text-align: center;
+  font-family: var(--font-navbar) !important;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+}
+
+input{
+  font-family: var(--font-input);
+}
+
+/*messages d'erreur*/
+p{
+  text-align: center;
+  color: red;
+  font-size: 12px;
+  margin: 0;
+  font-family: var(--font-input);
+}
+
+.data{
+  margin-top: 5px;
+}
+
+label {
+  margin-bottom: 5px;
+  color : black;
+  font-family: var(--font-label);
+}
+
+.cote {
+  display: flex;
+}
+
+mat-dialog-content {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #000000;
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.data input  {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+button {
+  color: #ffffff;
+  font-weight: 700;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+  background-color: rgba(27, 95, 108, 0.88);
+}
+
+.conditions {
+  display: flex;
+}
+
+.conditions input{
+  margin-right: 2px;
+}
+
+.conditions label {
+  margin-bottom: 0;
+}
+
+.conditions label:hover {
+  cursor: pointer;
+}
+
+.signup-link {
+  margin-top: 15px;
+  text-align: center;
+  font-family: var(--font-label);
+}
+.conditions input  {
+  margin-left:  6px;
+  padding: 10px;
+}
+.signup-link {
+  color: black;
+}
+
+.signup-link a {
+  text-decoration: none;
+  color: #0000ff;
+  cursor: pointer;
+}
+
+.signup-link a:hover{
+  text-decoration: underline;
+}
+
+.error{
+  color: red;
+  text-align: center;
+}
+
+
+label a {
+  text-decoration: none;
+  color: #0000ff;
+  cursor: pointer;
+
+}
+
+label a:hover{
+  text-decoration: underline;
+  color: #0000ff;
+
+}
+
+
+.trait-horizontal {
+  border-bottom: 1px solid #000; /* Couleur et épaisseur du trait */
+  margin-bottom: 10px; /* Espacement en bas du trait */
+}
+
+btn button {
+  color : white;
+}
+
+
+/**
+:host {
+  display: block;
+  height: 100%;
+}
+mat-mdc-dialog-content{
+  max-height: none !important;
+  height: 100%;
+}
+*/
+

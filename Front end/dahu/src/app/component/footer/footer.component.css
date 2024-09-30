@@ -1,0 +1,26 @@
+#footer{
+    height: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer p{
+    margin: 0;
+    margin-right: 15px;
+    font-family: var(--font-navbar);
+}
+
+svg{
+    height: 22px;
+    width: 22px;
+    fill: black;
+    margin: 5px;
+    transition: ease 0.2s;
+}
+svg:hover{
+    height: 32px;
+    width: 32px;
+    margin: 0px;
+    transform: rotate(10deg);
+}

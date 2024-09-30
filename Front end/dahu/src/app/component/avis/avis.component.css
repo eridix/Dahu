@@ -1,0 +1,216 @@
+.avis_individuel {
+    display: flex;
+    height: 100%;
+    text-shadow: 0px 3px 4px #BA8591;
+    font-size: 0.8em;
+    padding-right: 2em;
+    padding-left: 2em;
+
+}
+
+p, span{
+    font-family: var(--font-corps);
+}
+
+.left{
+    flex: 1;
+}
+
+.right{
+align-self: flex-end;
+margin-left: auto;
+color: blue;
+}
+
+.individu{
+    font-size: 1.1em;
+
+}
+.pseudo {
+    font-weight: bold;
+    /* height : 500px; */
+}
+
+.stars {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    bottom: 30px;
+}
+
+.avis {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.text-center{
+    padding-bottom: 10px;
+}
+
+.zone-avis, .text-center{
+    margin: 5px;
+    border: 2px solid;
+    border-radius: 17px;
+}
+
+.zone-avis{
+    margin-bottom: 20px;
+}
+
+.case_avis {
+    border-bottom: 1px solid;
+    position:relative;
+}
+
+
+.case_avis:last-child{
+    border: 0;
+}
+
+.contenu {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.pseudo {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.note img {
+    margin-right: 10px;
+}
+
+.note {
+    display: flex;
+}
+
+.note span {
+    margin-top: 5px ;
+}
+
+
+
+.tags {
+    display: flex;
+}
+
+.tags p {
+    font-weight: bolder;
+}
+
+.tags span {
+    margin-right: 10px;
+
+}
+
+.tag{
+  display: flex;
+}
+
+
+.souriant {
+    color:green;
+}
+
+.triste {
+    color: red;
+}
+
+.like svg {
+    width :16px;
+    height : 16px;
+    fill: currentColor;
+
+}
+
+.like {
+    color:blue;
+    display: flex;
+    flex-direction: row;
+    width : 100px;
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+.like span {
+    margin-left: 5px;
+    position:relative;
+    bottom : 5px;
+}
+
+
+
+
+.etoiles svg:hover{
+    cursor: pointer;
+}
+
+.case_etoiles {
+    display: flex;
+    margin: 10px;
+  }
+
+  .case_etoiles span {
+    position:relative;
+    margin-right: 10px;
+    top : 20px;
+    font-weight: bolder;
+  }
+
+  .etoiles {
+    font-size : 40px;
+    margin-top: -20px;
+  }
+
+  .avis-personnel .tags{
+    max-width: fit-content;
+    min-width: fit-content;
+    margin-top : 20px;
+    display: inline-block;
+  }
+
+  .tag-select {
+    position: relative;
+    display: flex;
+  }
+
+  .tag-select p{
+    margin-bottom: 0%;
+    margin-left: 5%;
+  }
+
+  .input-text {
+    margin: 10px;
+    margin-top: 25px;
+    height: 70px;
+    width:100%;
+    border-radius: 5px;
+    font-family: var(--font-input);
+  }
+
+
+
+
+  /* Style des boutons */
+button {
+    background-color: var(--transp-pink); /* Couleur de fond */
+    color: black; /* Couleur du texte */
+    padding: 10px;/* Espacement intérieur */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur au survol */
+
+    position: relative;
+    font-family: var(--font-corps);
+
+
+    /* Ajoutez d'autres styles selon vos préférences */
+  }
+
+  /* Style au survol */
+   button {
+    background-color: var(--second-pink);
+  }

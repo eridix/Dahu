@@ -1,0 +1,73 @@
+<mat-dialog-content style="max-height: 100%; max-width: 100%">
+  <h2>Inscription</h2>
+  <div class="trait-horizontal"></div>
+  <form [formGroup]="create_userForm" (ngSubmit)="create_user()">
+
+    <div class="cote">
+      <div class="data">
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" formControlName="prenom">
+        <p *ngIf="create_userForm.get('prenom')?.hasError('required') && create_userForm.get('prenom')?.touched">Le prénom est requis</p>
+      </div>
+      <div class="data">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" formControlName="nom">
+        <p *ngIf="create_userForm.get('nom')?.hasError('required') && create_userForm.get('nom')?.touched">Le nom est requis</p>
+      </div>
+    </div>
+
+    <div class="data">
+      <label for="email">Email</label>
+      <input type="text" id="email" formControlName="email">
+      <p *ngIf="create_userForm.get('email')?.hasError('required') && create_userForm.get('email')?.touched">L'email est requis</p>
+      <p *ngIf="create_userForm.get('email')?.hasError('pattern') && create_userForm.get('email')?.touched">L'email n'est pas valide</p>
+    </div>
+
+    <div class="data">
+      <label for="password">Mot de passe</label>
+      <input type="password" id="password" formControlName="password">
+      <p *ngIf="create_userForm.get('password')?.hasError('required') && create_userForm.get('password')?.touched">Le mot de passe est requis</p>
+      <p *ngIf="create_userForm.get('password')?.hasError('contientNombre') && create_userForm.get('password')?.touched">Le mot de passe doit contenir au moins un chiffre</p>
+      <p *ngIf="create_userForm.get('password')?.hasError('contientLettre') && create_userForm.get('password')?.touched">Le mot de passe doit contenir au moins une lettre et une majuscule</p>
+      <p *ngIf="create_userForm.get('password')?.hasError('minlength') && create_userForm.get('password')?.touched">Le mot de passe doit contenir au moins {{this.passwordMinLength}} caractères</p>
+      <p *ngIf="create_userForm.get('password')?.hasError('required')">
+        Le mot de passe est requis</p>
+      <p *ngIf="create_userForm.get('password')?.hasError('contientNombre')">
+        Le mot de passe doit contenir au moins un chiffre</p>
+      <p *ngIf="create_userForm.get('password')?.hasError('contientLettre')">
+        Le mot de passe doit contenir au moins une lettre et une majuscule</p>
+      <p *ngIf="create_userForm.get('password')?.hasError('minlength')">
+        Le mot de passe doit contenir au moins {{this.passwordMinLength}} caractères
+      </p>
+    </div>
+
+    <div class="data">
+      <label for="confirmPassword">Confirmer le mot de passe</label>
+      <input type="password" id="confirmPassword" formControlName="confirmPassword">
+      <p *ngIf="create_userForm.get('confirmPassword')?.hasError('required') && create_userForm.get('confirmPassword')?.touched">La confirmation du mot de passe est requise</p>
+      <p *ngIf="create_userForm.hasError('mismatch') && !create_userForm.get('confirmPassword')?.hasError('required') && create_userForm.get('confirmPassword')?.touched">Ce doit être identique au mot de passe initial</p>
+      <p *ngIf="create_userForm.get('confirmPassword')?.hasError('required')">La confirmation du mot de passe est
+        requise</p>
+      <p *ngIf="create_userForm.hasError('mismatch') && !create_userForm.get('confirmPassword')?.hasError('required')">
+        Ce doit être identique au mot de passe initial</p>
+    </div>
+
+    <div class="conditions">
+      <input type="checkbox" id="maCase" name="maCase" formControlName="acceptConditions">
+      <label style="margin-left: 2%;">  Accepter les <a (click)="condition()"> conditions générales d'utilisation </a> </label>
+      <p *ngIf="create_userForm.get('acceptConditions')?.hasError('requiredTrue') && create_userForm.get('acceptConditions')?.touched">Vous devez accepter les conditions générales d'utilisation</p>
+    </div>
+
+    <div class="error" *ngIf="confirmPasswordError && create_userForm.get('confirmPassword')?.touched">
+      Les mots de passe ne correspondent pas
+    </div>
+
+    <div class="btn">
+      <button type="submit">Inscription</button>
+    </div>
+
+  </form>
+  <div class="signup-link">
+    Vous possédez déjà un compte ? <a (click)="login()"> Identifiez-vous </a>
+  </div>
+</mat-dialog-content>

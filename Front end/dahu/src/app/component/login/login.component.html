@@ -1,0 +1,36 @@
+<mat-dialog-content style=" color: black;">
+  <h2 >Connexion</h2>
+  <div class="trait-horizontal"></div>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="data">
+      <label>Email</label>
+      <input type="text" formControlName="name" name="email" required>
+      <div *ngIf="isEmailValid()" class="error-message">
+        Veuillez saisir une adresse e-mail valide.
+      </div>
+      <!-- <div *ngIf="!isEmailValid()" class="error-message" style="opacity: 0%">
+         Veuillez saisir une adresse e-mail valide.
+       </div> -->
+     </div>
+     <div class="data">
+       <label>Mot de passe</label>
+       <input type="password" formControlName="password" required>
+
+     </div>
+    <!-- <div class="forgot-pass">
+       <a href="#" (click)="forgotPassword()">Mot de passe oublié ?</a>
+     </div> -->
+    <div *ngIf="isPasswordInvalid()" class="error-message">
+      Email ou mot de passe invalide.
+    </div>
+    <!-- <  <div *ngIf="!isPasswordInvalid()" class="error-message" style="opacity: 0%">
+     Email ou mot de passe invalide. Veuillez réessayer.
+   </div>-->
+
+     <button type="submit">Connexion</button>
+
+   <div class="signup-link">
+     Pas de compte ? <a (click)="createUser()">S'inscrire maintenant</a>
+   </div>
+ </form>
+</mat-dialog-content>

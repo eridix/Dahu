@@ -1,0 +1,51 @@
+<form [formGroup]="actualiteForm">
+    <section class="deuxieme">
+      <div class="coteacote">
+        <div class="data">
+          <label>Nom de l'actualité</label>
+          <input type="text" formControlName="titre">
+          <div *ngIf="actualiteForm.get('titre')?.invalid &&
+          (actualiteForm.get('titre')?.dirty || actualiteForm.get('titre')?.touched)"
+          class="alert alert-danger">
+          <div *ngIf="actualiteForm.get('titre')?.errors?.['required']">
+            Le titre est nécessaire.
+          </div>
+          <div *ngIf="actualiteForm.get('titre')?.errors?.['minlength']">
+            Le titre doit faire au moins 3 caractères.
+          </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+    <section class="troisieme">
+
+      <div class="description">
+        <label>Description </label>
+        <textarea formControlName="description">{{actualite.description}}</textarea>
+      </div>
+
+
+
+    </section>
+
+
+    <section class="quatrième">
+      <div class="imageprincipal">
+        <label for="upload-button">Image </label>
+        <img src="{{actualite.image}}" alt="" [width]="150"><br>
+        <input type="file" name="fileToUpload" id="upload-buttons">
+        <span id="file-names"></span>
+      </div>
+
+
+
+      <div class="add-actuality">
+        <button class="btn btn-primary" type="button" (click)="create()" *ngIf="is_create">Créer l'actualité</button>
+        <button class="btn btn-primary" type="button" (click)="update()" *ngIf="!is_create">Mettre à jour l'actualité</button>
+      </div>
+    </section>
+  </form>

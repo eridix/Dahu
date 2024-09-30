@@ -1,0 +1,277 @@
+section.barre {
+    width: 70%;
+    background-color: grey;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    /* Take available space in the row */
+  }
+  
+  #searchTerm {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    /* Adjusted to take full width of the container */
+    max-width: 500px;
+    /* Added max-width to prevent stretching on larger screens */
+  }
+  
+  section {
+    width: 100%;
+    padding: 25px;
+    margin-left: 100px;
+  }
+  
+  .case_avis{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  svg{
+    width: 1.8em;
+  }
+
+  svg:hover  {
+    width: 2.2em;
+    cursor: pointer;
+  }
+
+  
+  
+
+
+  
+  
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    section.barre {
+      flex-direction: column;
+      /* Stack items vertically on smaller screens */
+    }
+  }
+
+
+
+
+
+
+  .avis_individuel {
+    display: flex;
+    height: 100%;
+    text-shadow: 0px 3px 4px #BA8591;
+    font-size: 0.8em;
+    padding-right: 2em;
+    padding-left: 2em;
+
+}
+
+.left{
+    flex: 1;
+}
+
+.right{
+align-self: flex-end;
+margin-left: auto;
+color: blue;
+}
+
+.individu{
+    font-size: 1.1em;
+    
+}
+.pseudo {
+    font-weight: bold;
+    height : 500px;
+}
+
+.stars {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    bottom: 30px;
+}
+
+.avis {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.case_avis {
+    
+    border-top :  1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: -1px;
+    position:relative;
+}
+
+.contenu {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.pseudo {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.note img {
+    margin-right: 10px;
+}
+
+.note {
+    display: flex;
+}
+
+.note span {
+    margin-top: 5px ;
+}
+
+
+
+.tags {
+    display: flex;
+}
+
+.tags p {
+    font-weight: bolder;
+}
+
+.tags span {
+    margin-right: 10px;
+    
+}
+
+
+.souriant {
+    color:green;
+}
+
+.triste {
+    color: red;
+}
+
+.like svg {
+    width :16px;
+    height : 16px;
+    fill: currentColor;
+    
+}
+
+.like {
+    color:blue;
+    display: flex;
+    flex-direction: row;
+    width : 100px;
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+.like span {
+    margin-left: 5px;
+    position:relative;
+    bottom : 5px;
+}
+
+
+.espace {
+    background-color: #EBE6E9;
+    height: 150px;
+}
+
+
+  
+
+.case_etoiles {
+    display: flex;
+    margin: 10px;
+  }
+
+  .case_etoiles span {
+    position:relative;
+    margin-right: 10px;
+    top : 20px;
+    font-weight: bolder;
+  }
+
+  .etoiles {
+    font-size : 40px;
+    margin-top: -20px;
+  }
+  
+
+  .avis-personnel .tags{
+    max-width: fit-content;
+    min-width: fit-content;
+    margin-top : 20px;
+    display: inline-block;
+  }
+  
+  .custom-select {
+    position: relative;
+    display: flex;
+    height : 150px;
+  }
+
+  .custom-select .arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+    pointer-events: none; 
+    color: #000; 
+    right : 5px;  
+  }
+
+  .avis-personnel input {
+    margin: 10px;
+    height: 70px;
+    width:100%;
+    border-radius: 5px;
+  }
+
+  .avis-personnel {
+    height : 270px;
+  }
+
+
+  /* Style des boutons */
+button {
+    background-color: var(--transp-pink); /* Couleur de fond */
+    color: black; /* Couleur du texte */
+    padding: 10px;/* Espacement intérieur */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur au survol */
+    
+    position: relative;
+    
+  
+    /* Ajoutez d'autres styles selon vos préférences */
+  }
+  
+  /* Style au survol */
+   button {
+    background-color: var(--second-pink);
+  }
+
+
+  .avis_publies{
+    margin-top: 100px;
+  }

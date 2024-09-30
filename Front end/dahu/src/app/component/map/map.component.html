@@ -1,0 +1,24 @@
+<div class="map-container">
+  <google-map class="map" [width]="width" [height]="height" [options]="mapOptions" [center]="center"
+    [zoom]="zoom"><!--(mapClick)="addMarker($event)"-->
+    <map-marker #marker="mapMarker" *ngFor="let m of markerPositions; let i = index" [position]="m"
+      (mapClick)="openInfoWindow(i)">
+    </map-marker>
+    <map-info-window [options]="infoWindowOptions" #infoWindow>
+    </map-info-window>
+  </google-map>
+
+  <div class="marker-info" *ngIf="isOnFiltrePage">
+    <div *ngIf="selectedActivite">
+      <h2 class="titre-detail">{{ selectedActivite.name }}</h2>
+      <img class="img-detail" [src]="selectedActivite.img" [alt]="selectedActivite.name"
+        style="width: 200px; height: auto; margin-bottom: 10px;">
+      <p class="adresse-detail"><strong>Adresse:</strong> {{ selectedActivite.adresse }}</p>
+      <p class="score-detail"><strong>Score:</strong> {{ selectedActivite.moyenne }} / 5</p>
+      <div class="picto">
+        <img *ngFor="let picto of selectedActivite.pictogrammes" [src]="picto.img" [alt]="selectedActivite.name"
+          style="width: 50px; height: auto;">
+      </div>
+      <button class="bouton-detail" (click)="goToActivite(selectedActivite.id)">Voir plus</button>
+    </div>
+  </div>

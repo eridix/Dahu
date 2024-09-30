@@ -1,0 +1,117 @@
+#newspaper{
+    margin: 100px 0;
+    padding-top: 50px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-family: var(--font-title);
+}
+
+#newspaper .img-div{
+    height: 200px;
+    object-fit: fill;
+}
+#newspaper img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+#newspaper .row{
+    display: flex;
+    justify-content: center;
+}
+#newspaper .col{
+    max-width: 280px;
+}
+
+h1{
+}
+p{
+    font-family: var(--font-corps);
+}
+
+.voir-plus{
+    font-family: var(--font-link);
+}
+
+.card{
+    margin-bottom: 10px;
+}
+.card-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    white-space: normal;
+    font-family: var(--font-navbar);
+    font-size: larger;
+}
+
+.card a{
+    text-decoration: none;
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    font-weight: bold;
+    color: var(--second-pink);
+    transition: 0.2s;
+    cursor: pointer;
+}
+.card-body{
+    height: 210px;
+    position: relative;
+}
+.card-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    white-space: normal;
+}
+.card-body svg{
+    fill: var(--second-pink);
+    transition: 0.2s;
+}
+.card a:hover{
+    color: var(--first-pink);
+}
+.card a:hover svg{
+    fill: var(--first-pink);
+}
+
+.img-div{
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.img-div div{
+    position: absolute;
+    color: var(--base);
+    fill: var(--base);
+    opacity: 0;
+    transition: 0.3s;
+}
+.img-div img{
+    position: absolute;
+    transition: 0.3s;
+}
+
+.img-div:hover div{
+    opacity: 1;
+    transition: 0.3s;
+}
+.img-div:hover img{
+    filter: brightness(50%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.img-div:hover{
+    cursor: pointer;
+}
+

@@ -1,0 +1,22 @@
+<div class="total">
+  <app-menu-backoffice [page]="'theme'"></app-menu-backoffice>
+
+  <div class="container">
+
+    <section class="titre">
+      <div class="search-container">
+        <h1 class="title">Mettre à jour le thème et les sous thèmes</h1>
+      </div>
+      <div class="add-actuality">
+        <button class="btn btn-primary" type="button" (click)="goBack()"> Retour</button>
+      </div>
+
+
+    </section>
+    <ng-container *ngIf="themeobservable | async as theme">
+        <app-back-office-form-theme [theme]="theme" [is_create]="false"></app-back-office-form-theme>
+    </ng-container>
+
+
+  </div>
+</div>

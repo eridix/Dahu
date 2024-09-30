@@ -1,0 +1,234 @@
+<nav class="navbar navbar-expand-lg position-fixed shadow-lg" style="background-color: {{color[1]}};" id="navbar">
+  <div class="container-fluid">
+
+    <a id="logo"><img src="../../../assets/{{logo}}" alt="" (click)="goAccueil()"></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel" style="background-color: {{color[3]}};">
+
+      <div class="offcanvas-header">
+        <a id="logo" (click)="switchDahu()" style="position: relative;">
+          <img src="../../../assets/{{logo2}}" alt="">
+          <div class="goTo">
+             <p>Aller vers {{nameOtherSection}}</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+            </svg>
+          </div>
+        </a>
+        <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body container-fluid">
+        <div class="row justify-content-start align-items-start">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 col">
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" (click)="goActualite()">Actualités</a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+            </li>
+            <div *ngFor="let theme of themes">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                  {{theme.name}}
+                </a>
+                <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+                <ul class="dropdown-menu shadow-lg">
+                  <li *ngFor="let type of theme.types"><a class="dropdown-item" (click)="goActivite(theme.id,type.id)" (mouseover)="onMouseOver($event)" (mouseout)="onMouseOut($event)">{{type.name}}</a></li>
+                </ul>
+              </li>
+            </div>
+
+
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                GRENOBLE BY NIGHT
+              </a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+              <ul class="dropdown-menu shadow-lg">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                SPORTS & LOISIRS
+              </a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+              <ul class="dropdown-menu shadow-lg">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                AUTRES ÉTABLISSEMENTS
+              </a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+              <ul class="dropdown-menu shadow-lg">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li> -->
+
+            <!-- <li class="nav-item">
+              <a class="nav-link" aria-current="page" (click)="goEquipe()">NOTRE ÉQUIPE</a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" (click)="goContact()">CONTACT</a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+            </li> -->
+          </ul>
+
+          <!-- <form role="search" class="col">
+            <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+          </form> -->
+          <ul *ngIf="sectionName=='dahu'"  class="navbar-nav me-auto mb-2 mb-lg-0 col-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" (click)="goEquipe()">Equipe</a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+            </li>
+          </ul>
+          <ul *ngIf="user_connecter?.role?.name=='ADMIN'"  class="navbar-nav me-auto mb-2 mb-lg-0 col-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" (click)="goBackOffice()">Back-office</a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0 col" id="user" *ngIf="user_connecter">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle user_connecter" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{user_connecter!.nom}} {{user_connecter!.prenom}}
+              </a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+              <ul class="dropdown-menu shadow-lg">
+                <!-- <li><a class="dropdown-item" href="#" (mouseover)="onMouseOver($event)" (mouseout)="onMouseOut($event)">Action</a></li> -->
+                <li><a class="dropdown-item" (click)="changerCompte()" (mouseover)="onMouseOver($event)" (mouseout)="onMouseOut($event)">Changer de compte</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" (click)="deconnection()" (mouseover)="onMouseOver($event)" (mouseout)="onMouseOut($event)">Se deconnecter</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0 col" id="user" *ngIf="!user_connecter">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" (click)="openDialogConnection()">Connexion</a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a class="logoOffcanvas" id="logo">
+      <img src="../../../assets/{{logo2}}" alt="" (click)="switchDahu()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" class="bi bi-arrow-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+      </svg>
+    </a>
+
+  </div>
+</nav>
+
+<!--
+<nav class="navbar navbar-expand-lg shadow-lg position-fixed" style="background-color: {{color[1]}};" id="navbar">
+    <div class="container-fluid">
+      <a href="/accueil"><img src="../../../assets/dahu.png" alt="" (click)="switchDahu()" id="logo1"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="collapse navbar-collapse offcanvas-body" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">ARTICLES</a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" role="button"aria-expanded="false">
+                À TABLE !
+              </a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+              <ul class="dropdown-menu shadow-lg">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                GRENOBLE BY NIGHT
+              </a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+              <ul class="dropdown-menu shadow-lg">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                SPORTS & LOISIRS
+              </a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+              <ul class="dropdown-menu shadow-lg">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                AUTRES ÉTABLISSEMENTS
+              </a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+              <ul class="dropdown-menu shadow-lg">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">NOTRE ÉQUIPE</a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">CONTACT</a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+          </form>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mickael R.
+              </a>
+              <div class="hover-line"><div style="background-color: {{color[0]}};"></div></div>
+              <ul class="dropdown-menu shadow-lg">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  -->

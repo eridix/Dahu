@@ -1,0 +1,137 @@
+section.barre {
+  background-color: #d2d2d2;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow items to wrap to the next line */
+  justify-content: space-between;
+  position: fixed;
+  z-index: 3;
+  margin-right: 10%;
+  width: 70%;
+}
+
+.liste {
+  margin-top: 100px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  /* Take available space in the row */
+}
+
+.search-container .add-activity {
+  display: flex;
+  align-items: center;
+}
+
+#searchTerm {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  /* Adjusted to take full width of the container */
+  max-width: 500px;
+  /* Added max-width to prevent stretching on larger screens */
+}
+
+
+
+section {
+  width: 100%;
+  padding: 25px;
+  margin-left: 100px;
+}
+
+article {
+  border: 0;
+  position: relative;
+  background-color: #d3cfcf;
+  z-index: 1;
+  box-shadow: inset 0 -1px 0 0 rgba(100, 121, 143, 0.122);
+
+  &:hover {
+    box-shadow: inset 2px 0 0 #dadce0, inset -2px 0 0 #dadce0, 0 2px 4px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15);
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &:hover h4 {
+    width: 70%;
+  }
+
+  &:hover .icons {
+    width: 5%;
+  }
+}
+
+img {
+  height: 40px;
+  width: 5%;
+  object-fit: cover;
+}
+
+.rectangle-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: larger;
+  width: 20%;
+}
+
+h3,
+h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+  padding-left: 5px;
+}
+
+h4 {
+  width: 75%;
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  width: 0;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.icon:hover {
+  opacity: 0.7;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  section.barre {
+    flex-direction: column;
+    /* Stack items vertically on smaller screens */
+  }
+}
+
+.mat-h3,
+.mat-subtitle-1,
+.mat-typography .mat-h3,
+.mat-typography .mat-subtitle-1,
+.mat-typography h3 {
+  margin: 0 !important;
+}

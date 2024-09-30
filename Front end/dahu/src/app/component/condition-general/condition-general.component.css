@@ -1,0 +1,25 @@
+.titre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+
+button {
+  color: #ffffff;
+  font-weight: 700;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+  background-color: rgba(27, 95, 108, 0.88);
+}
+
+p{
+  font-family: var(--font-corps);
+}
+
+strong{
+  font-family: var(--font-navbar);
+}

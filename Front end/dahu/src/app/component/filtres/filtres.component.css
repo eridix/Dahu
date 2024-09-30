@@ -1,0 +1,48 @@
+li{
+    list-style: none;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+nav ul .typeC ul{
+    display: none;
+}
+
+h2, h3{
+    font-size: 1.5vw;
+    font-family: var(--font-navbar);
+}
+
+#check-li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.form-check-image{
+    height: 2vw;
+    width: 2vw;
+    margin-left: 0.5em;
+}
+
+label{
+    cursor: pointer;
+    margin-left: 5px;
+    font-family: var(--font-corps);
+}
+
+/** recherche **/
+.i{
+    width: 100%;
+    height: fit-content;
+    font-size: 2vw;
+}
+
+@media (min-width: 992px){
+    .i{
+        font-size: 1.5vw;
+    }
+}

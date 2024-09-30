@@ -1,0 +1,158 @@
+/* General Layout */
+.corps {
+  margin: 12%;
+  margin-top: 50px;
+  padding-top: 5%;
+}
+
+#informations .row {
+  margin: 0;
+}
+
+#informations {
+  position: relative;
+  min-height: 45vw;
+}
+
+.absolute {
+  position: absolute;
+}
+
+/* Header Styling */
+h1 {
+  font-size: xxx-large;
+  font-family: var(--font-title);
+  font-weight: bold;
+}
+
+#desc {
+  padding: 2em;
+
+  p {
+     font-size: larger;
+  }
+}
+
+p{
+  font-family: var(--font-corps);
+}
+
+/* Info Zone Styling */
+.zone-infos,
+.carousel {
+  margin: 5px;
+  border: 2px solid;
+  border-radius: 17px;
+}
+
+.active {
+  background-color: #EDB8C5;
+}
+
+/* Tab Styling */
+#myTab {
+  color: black;
+  border-bottom-width: 0px;
+}
+
+#home-tab:active {
+  color: red;
+}
+
+/* Review Section Styling */
+.avis-personnel {
+  background-color: #EDB8C5;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+
+.note_left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tab Content Styling */
+.tab {
+  overflow: hidden;
+  background-color: #EDB8C5;
+}
+
+.tab-content {
+  margin-bottom: 5em;
+}
+
+/* Carousel Styling */
+.carousel {
+  aspect-ratio: 1.5;
+}
+
+.carousel-inner {
+  height: 100%;
+  display: flex;
+  border-radius: 15px;
+}
+
+/* Coordinates and Icon Styling */
+.coordonees {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.icon-text-container img {
+  max-width: 40px;
+  margin-right: 5px;
+  aspect-ratio: 1;
+}
+
+.icon-text-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+}
+
+.icon-text-container i {
+  font-size: 24px;
+}
+
+.icon-text-container p {
+  margin-left: 10px;
+  align-items: center;
+}
+
+/* Rating and Stars Styling */
+#moyenne {
+  padding: 0 0 40px 0;
+}
+
+.stars svg {
+  width: 32px;
+  height: 32px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.stars p {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+.nbr-avis-moyenne {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#full-decimal {
+  margin-right: -16px;
+}
+
+#empty-decimal {
+  margin-left: -16px;
+}

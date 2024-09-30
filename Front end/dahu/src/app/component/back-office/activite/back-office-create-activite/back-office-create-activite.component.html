@@ -1,0 +1,25 @@
+
+<div class="total">
+
+  <app-menu-backoffice [page]="'activite'"></app-menu-backoffice>
+
+  <div class="container">
+
+    <section class="premiere">
+      <div class="title-container">
+        <h1 class="title"> Ajouter une activité</h1>
+
+        <div class="add-activity">
+          <button class="btn btn-primary" type="button" (click)="goBack()"> Retour</button>
+        </div>
+      </div>
+
+    </section>
+
+    <app-back-office-form-activite [activite]="activite" [is_create]="true"></app-back-office-form-activite>
+
+  </div>
+</div>
+
+
+

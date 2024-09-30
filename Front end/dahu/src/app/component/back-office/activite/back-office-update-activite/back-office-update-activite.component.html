@@ -1,0 +1,23 @@
+<div class="total">
+
+  <app-menu-backoffice [page]="'activite'"></app-menu-backoffice>
+
+
+  <div class="container">
+
+    <section class="premiere">
+      <div class="search-container">
+        <h1 class="title"> Mettre à jour une activité</h1>
+      </div>
+      <div class="add-activity">
+        <button class="btn btn-primary" type="button" (click)="goBack()"> Retour</button>
+      </div>
+    </section>
+
+    <ng-container *ngIf="activiteObservable | async as activiteData">
+      <app-back-office-form-activite [activite]="activiteData" [is_create]="false"></app-back-office-form-activite>
+    </ng-container>
+    <!-- <app-back-office-form-activite async [activite]="activite" [is_create]="false"></app-back-office-form-activite> -->
+
+  </div>
+</div>

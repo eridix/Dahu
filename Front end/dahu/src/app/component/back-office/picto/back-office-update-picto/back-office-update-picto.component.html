@@ -1,0 +1,23 @@
+<div class="total">
+
+    <app-menu-backoffice [page]="'pictos'"></app-menu-backoffice>
+  
+  
+    <div class="container">
+  
+      <section class="premiere">
+        <div class="search-container">
+          <h1 class="title"> Mettre à jour un pictogramme</h1>
+        </div>
+        <div class="add-picto">
+          <button class="btn btn-primary" type="button" (click)="goBack()"> Retour</button>
+        </div>
+      </section>
+      
+      <ng-container *ngIf="pictoObservable | async as pictoData">
+        <app-back-office-form-picto [picto]="pictoData" [is_create]="false"></app-back-office-form-picto>
+      </ng-container>
+  
+    </div>
+  </div>
+  

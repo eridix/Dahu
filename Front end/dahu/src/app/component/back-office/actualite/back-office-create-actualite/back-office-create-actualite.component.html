@@ -1,0 +1,25 @@
+
+<div class="total">
+
+    <app-menu-backoffice [page]="'actualite'"></app-menu-backoffice>
+  
+  
+    <div class="container">
+  
+      <section class="premiere">
+        <div class="search-container">
+          <h1 class="title"> Ajouter une actualité</h1>
+        </div>
+        <div class="add-actuality">
+          <button class="btn btn-primary" type="button" (click)="goBack()"> Retour</button>
+        </div>
+      </section>
+  
+      <app-back-office-form-actualite [actualite]="actualite" [is_create]="true"></app-back-office-form-actualite>
+  
+    </div>
+  </div>
+  
+  
+  
+  

@@ -1,0 +1,43 @@
+#page-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#zone-jeu{
+    width: 70%;
+    height: 200px;
+    background-color: white;
+    position: relative;
+}
+
+.game-element{
+    position: absolute;
+}
+
+.montagne{
+  right: 0;
+  bottom: 30px;
+  transition: transform 5s ease-in-out;
+}
+
+.parapentes{
+
+}
+
+#dahu{
+    left: 30px;
+    bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.jump{
+    transform: translateY(-50px);
+  }
+
+
+.mouvement-obstacle{
+  transform: translateX(-1400px);
+}

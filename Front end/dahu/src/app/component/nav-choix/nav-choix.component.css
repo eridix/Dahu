@@ -1,0 +1,12 @@
+img{
+  height: 60px;
+}
+.navbar{
+  background-color: var(--second-pink);
+  width: 100%;
+  top: 0;
+}
+input{
+  background-color: var(--base);
+  border-radius: 0;
+}

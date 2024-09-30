@@ -1,0 +1,42 @@
+<app-nav-bar></app-nav-bar>
+
+<section id="article" *ngIf="actualite">
+    <img src="{{actualite.image}}" alt="">
+    <h2 style="background-color: var(--second-blue);">{{actualite.titre}}</h2>
+
+    <div>
+        <p class="infos"> leguidedudahu.fr -{{actualite.auteur.nom}} {{actualite.auteur.prenom}} - novembre 26, 2023</p>
+
+        <p>{{actualite.description}}</p>
+        <!-- <p>
+            l’été bat son plein, et il n’y a pas de meilleur moment pour explorer les merveilleux paysages offerts par la région de l’Isère.
+            Rien ne vaut une randonnée pour découvrir des sites montagneux, des sentiers forestiers et des lacs rafraîchissants.</p>
+
+        <h5>1. Cascades du Cirque de Saint-Même</h5>
+        <p>
+            Si vous cherchez une escapade rapide pour explorer les magnifiques paysages autour de Grenoble,
+            ne cherchez pas plus loin que les cascades du Cirque de Saint-Même. En moins d’une heure de marche,
+            avec un dénivelé de seulement 226 mètres, cette balade est considérée comme facile, mais le résultat
+            est tout simplement spectaculaire. Vous serez récompensé par une vue imprenable sur les cascades et les environs.
+            C’est un bon premier objectif à vous fixer s’il s’agit de vos premières randonnées.</p>
+
+        <h5>2. Le Lac du Lauvitel</h5>
+        <p>
+            Pour ceux qui recherchent un moyen de se rafraîchir pendant les journées chaudes de l’été, une randonnée vers
+            le lac du Lauvitel est un excellent choix. Cette randonnée de 6,3 kilomètres prend environ 2 heures et offre une expérience inoubliable.
+            Bien que le dénivelé soit plus important, avec 560 mètres, l’effort en vaut la peine. À l’arrivée, vous découvrirez
+            un véritable paradis de montagne, et serez récompensé avec une bonne baignade pour vous rafraichir !</p>
+
+        <h5>3. Cascades du Cirque de Saint-Même</h5>
+        <p>
+            Pour les aventuriers intrépides, le lac d’Eychauda est un défi qui en vaut la peine. Situé dans le Parc national des Écrins,
+            ce lac glaciaire abrite parfois des icebergs, même en plein été. Prévoyez une randonnée de 10,9 kilomètres, d’une durée d’environ 3 heures
+            et 20 minutes (bien sûr, vous pouvez faire des pauses, on ne vous jugera point). Le site est absolument magnifique, et vous serez ébahi par
+            la vue spectaculaire une fois que vous aurez atteint le lac.</p>
+
+        <p>
+            Que vous soyez débutant ou expérimenté, il y aura toujours une randonnée adaptée à chacun dans les environs de Grenoble.
+            Prenez le temps d’explorer ces trésors naturels et de vous émerveiller devant la beauté des montagnes, des forêts et des lacs.
+            L’été ne dure qu’un temps, alors profitez-en au maximum ! (Et pensez à bien vous hydrater)</p> -->
+    </div>
+</section>

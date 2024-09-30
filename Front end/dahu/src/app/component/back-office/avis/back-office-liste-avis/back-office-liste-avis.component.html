@@ -1,0 +1,61 @@
+<app-menu-backoffice [page]="'avis'"></app-menu-backoffice>
+
+<div class="container">
+
+    <section class="barre">
+      <div class="search-container">
+        <!-- <input type="text" id="searchTerm" placeholder="Rechercher..."> -->
+      </div>
+    </section>
+
+    <!--<section class="liste" >
+      <article class="rectangle" *ngFor="let a of avis">
+        <div class="rectangle-content">
+          <h4>{{a.auteur.nom}} {{a.auteur.prenom}}</h4>
+          <h4>{{a.avis}}</h4>
+          <div class="icons">
+            <svg (click)="deleteAvis(a.id)" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+              <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
+            </svg>
+          </div>
+        </div>
+      </article>
+
+    </section>-->
+    <section class="avis_publies">
+      <div *ngFor="let avis of aviss" class="case_avis">
+          <div class="contenu">
+              <div class="individu">
+                  <span class="pseudo" *ngIf="avis.auteur">{{avis.auteur.nom}} {{avis.auteur!.prenom}}</span>
+              </div>
+              <div class="note">
+                  <div id="etoiles">
+                      <ng-container *ngFor="let etoile of getRange(avis.note)">
+                          &#x2605;
+                      </ng-container>
+                      <ng-container *ngFor="let etoile of getRange(5 - avis.note)">
+                          &#x2606;
+                      </ng-container>
+                  </div>
+              </div>
+              <span class="avis">{{avis.avis}}</span>
+              <div class="tags">
+                  <div *ngFor="let tag of avis.tag">
+                      <div class="souriant" *ngIf="tag.isPositive">
+                          &#x263B;
+                      </div>
+                      <div class="triste" *ngIf="!tag.isPositive">
+                          &#x2639;
+                      </div>
+                      <span>{{ tag.description }}</span>
+                  </div>
+              </div>
+          </div>
+          <div class="icons">
+            <svg (click)="deleteAvis(avis.id)" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+              <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
+            </svg>
+          </div>
+      </div>
+    </section>
+  </div>

@@ -1,0 +1,57 @@
+
+    <!-- <input class="i rechercher" type="text" placeholder="Rechercher"> -->
+    <br><br>
+    <form method="post">
+        <nav>
+            <ul>
+                <li class="typeO" id="type"><h2 class="element" (click)="type()">Type
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                    </h2>
+                    <ul>
+                        <li *ngFor="let type of types">
+                            <input class="form-check-input cb" type="checkbox" value="" id="type{{type.id}}" (click)='addType(type.id)' [checked]="estCocheType(type.id)">
+                            <label class="form-check-label" for="type{{type.id}}">
+                              {{type.name}}
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+            </ul><ul>
+                <li class="pictoO" id="picto"><h2 class="element" (click)="picto()">Pictos
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                      </svg>
+                    </h2>
+                    <ul class="container">
+                        <div class="row">
+                        <li *ngFor="let picto of pictos" id="check-li" class="col col-6">
+                            <input class="form-check-input cb" type="checkbox" value="" id="picto{{picto.id}}" (click)='addPicto(picto.id)' [checked]="estCochePicto(picto.id)">
+                            <label *ngIf="picto.img" class="form-check-label" for="picto{{picto.id}}">
+                              <img class="form-check-image" for="flexCheckDefault" src="{{picto.img}}" alt="{{picto.name}}">
+                            </label>
+                            <label *ngIf="!picto.img" class="form-check-label" for="picto{{picto.id}}">
+                              {{picto.name}}
+                            </label>
+                        </li></div>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h2>Coups de coeur du Dahu</h2>
+                    <ul class="container">
+                      <div class="row">
+                      <li id="check-li" class="col col-6">
+                          <input class="form-check-input cb" type="checkbox" value="" id="coup_de_coeur" (click)='addCoupDeCoeur()' [checked]="estCocheCoupDeCoeur()">
+                          <label class="form-check-label" for="coup_de_coeur">
+                            <img class="form-check-image" for="flexCheckDefault" src="../../../assets/coup -de-coeur-dahu.png" alt="Coup de Coeur">
+                          </label>
+                        </li>
+                      </div>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </form>

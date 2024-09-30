@@ -1,0 +1,94 @@
+<form [formGroup]="activiteForm">
+  <section class="deuxieme">
+    <div class="coteacote">
+      <div class="data">
+        <label>Nom de l'activite</label>
+        <input type="text" formControlName="nom">
+        <div *ngIf="activiteForm.get('nom')?.invalid &&
+        (activiteForm.get('nom')?.dirty || activiteForm.get('nom')?.touched)"
+        class="alert alert-danger">
+        <div *ngIf="activiteForm.get('nom')?.errors?.['required']">
+          Le nom est nécessaire.
+        </div>
+        <div *ngIf="activiteForm.get('nom')?.errors?.['minlength']">
+          Le nom doit faire au moins 3 caractères.
+        </div>
+        </div>
+      </div>
+
+      <div class="dataun">
+        <label>Adresse</label>
+        <input type="text" formControlName="adresse">
+        <div *ngIf="activiteForm.get('adresse')?.invalid &&
+        (activiteForm.get('adresse')?.dirty || activiteForm.get('adresse')?.touched)"
+        class="alert alert-danger">
+        <div *ngIf="activiteForm.get('adresse')?.errors?.['required']">
+          L'adresse est nécessaire.
+        </div>
+        </div>
+      </div>
+
+      <div class="dataun">
+        <label>Telephone</label>
+        <input type="text" placeholder="Ex: 00 00 00 00 00" formControlName="telephone">
+        <div *ngIf="activiteForm.get('telephone')?.invalid &&
+        (activiteForm.get('telephone')?.dirty || activiteForm.get('telephone')?.touched)"
+        class="alert alert-danger">
+        <div *ngIf="activiteForm.get('telephone')?.errors?.['required']">
+          Le téléphone est nécessaire.
+        </div>
+        </div>
+      </div>
+
+
+      <div class="datatrois">
+        <label>Catégorie</label>
+        <select name="types"  formControlName="types">
+            <option *ngFor="let type of types" [ngValue]="type.id">{{type.name}}</option>
+        </select>
+      </div>
+
+
+    </div>
+
+    <div class="picto_div">
+      <label>Pictogrammes</label>
+      <div class="pictograme container">
+        <div class="picto col col-6" *ngFor="let picto of pictos" >
+          <input type="checkbox" id="picto{{picto.id}}" name="{{picto.name}}" [checked]="is_picto_check(picto.id)" (change)="picto_change(picto)">
+          <img src="{{picto.img}}">
+        </div>
+    </div>
+  </div>
+
+  </section>
+
+  <section class="troisieme">
+
+    <div class="description">
+      <label>Description (longue) </label>
+      <textarea formControlName="description"> {{activite.description}} </textarea>
+    </div>
+
+
+
+  </section>
+
+
+  <section class="quatrième">
+
+    <div class="imageprincipal">
+      <label for="upload-button">Image principale</label>
+      <img  class="upload" id="chosen-images" src="{{activite.img}}" alt="" style="max-width: 150px;">
+      <br>
+      <input formControlName="image" type="file" name="fileToUpload" (change)="onFileSelected($event)" id="upload-buttons">
+      <span id="file-names"></span>
+    </div>
+
+
+    <div class="add-activity">
+      <button class="btn btn-primary" type="button" (click)="create()" *ngIf="is_create">Créer l'activité</button>
+      <button class="btn btn-primary" type="button" (click)="update()" *ngIf="!is_create">Mettre à jour l'activité</button>
+    </div>
+  </section>
+</form>

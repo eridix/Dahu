@@ -1,0 +1,37 @@
+#article{
+    border-radius: 10px;
+    margin: 150px calc(var(--marge-responsive)*3);
+}
+#article img{
+    width: 96%;
+    aspect-ratio: 2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px 5px 0 0;
+    margin: auto 2%;
+}
+h5{
+    color: var(--second-blue);
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+h2{
+    padding: 5px 15px 5px 15px;
+    color: var(--base);
+    margin: 0;
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+#article div{
+    padding: 15px;
+    margin: auto 5%;
+}
+p{
+    margin-left: 50px;
+}
+.infos{
+    margin-bottom: 50px !important;
+}

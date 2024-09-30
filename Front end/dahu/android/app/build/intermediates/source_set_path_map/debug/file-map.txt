@@ -1,0 +1,31 @@
+com.example.app-lifecycle-viewmodel-2.6.1-0 /home/paul/.gradle/caches/transforms-3/0859f3eb48c2c666894d9f7156fe9f5e/transformed/lifecycle-viewmodel-2.6.1/res
+com.example.app-lifecycle-livedata-core-2.6.1-1 /home/paul/.gradle/caches/transforms-3/0b6771bec32ab62b66848eae55871348/transformed/lifecycle-livedata-core-2.6.1/res
+com.example.app-core-ktx-1.10.0-2 /home/paul/.gradle/caches/transforms-3/1e309878445cf42dca390b9ca37eb063/transformed/core-ktx-1.10.0/res
+com.example.app-coordinatorlayout-1.2.0-3 /home/paul/.gradle/caches/transforms-3/3815152c7df4f87bd469302317a19c9a/transformed/coordinatorlayout-1.2.0/res
+com.example.app-lifecycle-viewmodel-savedstate-2.6.1-4 /home/paul/.gradle/caches/transforms-3/4b07b145c1bc19ec6e5c0edc656731aa/transformed/lifecycle-viewmodel-savedstate-2.6.1/res
+com.example.app-activity-1.7.0-5 /home/paul/.gradle/caches/transforms-3/58c3528899526d12bbd377c7962f8969/transformed/activity-1.7.0/res
+com.example.app-lifecycle-runtime-2.6.1-6 /home/paul/.gradle/caches/transforms-3/6328ea85e35469bce868ae26aff70016/transformed/lifecycle-runtime-2.6.1/res
+com.example.app-annotation-experimental-1.3.0-7 /home/paul/.gradle/caches/transforms-3/6abcc22308abd73b9a3a3a44f05481aa/transformed/annotation-experimental-1.3.0/res
+com.example.app-fragment-1.5.6-8 /home/paul/.gradle/caches/transforms-3/76dc968b98326971fa4ad9fdcad66776/transformed/fragment-1.5.6/res
+com.example.app-profileinstaller-1.3.0-9 /home/paul/.gradle/caches/transforms-3/7c68a5ba252991a0d9b31fa28caee8c1/transformed/profileinstaller-1.3.0/res
+com.example.app-appcompat-resources-1.6.1-10 /home/paul/.gradle/caches/transforms-3/9878b90f1d6a53a2650ef2c444e53139/transformed/appcompat-resources-1.6.1/res
+com.example.app-lifecycle-process-2.6.1-11 /home/paul/.gradle/caches/transforms-3/9a14a782c96a662697d1e7e8f49fb404/transformed/lifecycle-process-2.6.1/res
+com.example.app-core-runtime-2.2.0-12 /home/paul/.gradle/caches/transforms-3/c7f497c558743f83f0d365f5f4b5dfcc/transformed/core-runtime-2.2.0/res
+com.example.app-core-splashscreen-1.0.0-13 /home/paul/.gradle/caches/transforms-3/cb5556632bde7a604b865c64895342df/transformed/core-splashscreen-1.0.0/res
+com.example.app-appcompat-1.6.1-14 /home/paul/.gradle/caches/transforms-3/ceae36d24e3d5b97151037d044f1a8fc/transformed/appcompat-1.6.1/res
+com.example.app-emoji2-views-helper-1.2.0-15 /home/paul/.gradle/caches/transforms-3/da6a2749cf93d06fc01a7ad9b18e8c1a/transformed/emoji2-views-helper-1.2.0/res
+com.example.app-emoji2-1.2.0-16 /home/paul/.gradle/caches/transforms-3/de2ae42d32e3cd715da30570a46f201b/transformed/emoji2-1.2.0/res
+com.example.app-lifecycle-livedata-2.6.1-17 /home/paul/.gradle/caches/transforms-3/e46ce9c7bc05f0b12553534943026abd/transformed/lifecycle-livedata-2.6.1/res
+com.example.app-startup-runtime-1.1.1-18 /home/paul/.gradle/caches/transforms-3/f204862022ac108fd749e7ee60ed2c36/transformed/startup-runtime-1.1.1/res
+com.example.app-webkit-1.6.1-19 /home/paul/.gradle/caches/transforms-3/f2fa9c77ace0407ee4926a7bff74d231/transformed/webkit-1.6.1/res
+com.example.app-savedstate-1.2.1-20 /home/paul/.gradle/caches/transforms-3/f58b573f96d12b564e6312ab64791c1c/transformed/savedstate-1.2.1/res
+com.example.app-core-1.10.0-21 /home/paul/.gradle/caches/transforms-3/fe13f5b1a2b9d1fcd7e963c80bf59acf/transformed/core-1.10.0/res
+com.example.app-pngs-22 /home/paul/Dahu/sae5-dahu/Front end/dahu/android/app/build/generated/res/pngs/debug
+com.example.app-resValues-23 /home/paul/Dahu/sae5-dahu/Front end/dahu/android/app/build/generated/res/resValues/debug
+com.example.app-packageDebugResources-24 /home/paul/Dahu/sae5-dahu/Front end/dahu/android/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.example.app-packageDebugResources-25 /home/paul/Dahu/sae5-dahu/Front end/dahu/android/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.example.app-merged_res-26 /home/paul/Dahu/sae5-dahu/Front end/dahu/android/app/build/intermediates/merged_res/debug
+com.example.app-debug-27 /home/paul/Dahu/sae5-dahu/Front end/dahu/android/app/src/debug/res
+com.example.app-main-28 /home/paul/Dahu/sae5-dahu/Front end/dahu/android/app/src/main/res
+com.example.app-packaged_res-29 /home/paul/Dahu/sae5-dahu/Front end/dahu/android/capacitor-cordova-android-plugins/build/intermediates/packaged_res/debug
+com.example.app-packaged_res-30 /home/paul/Dahu/sae5-dahu/Front end/dahu/node_modules/@capacitor/android/capacitor/build/intermediates/packaged_res/debug

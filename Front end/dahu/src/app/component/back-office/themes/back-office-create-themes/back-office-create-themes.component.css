@@ -1,0 +1,45 @@
+.total {
+  background-image: url('https://www.congres-wtcgrenoble.com/sites/default/files/Grenoble%20depuis%20la%20Bastille%20basse%20def_0.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top : 0;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+
+}
+
+
+section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #ececec;
+  margin-left: 20%;
+}
+
+
+section.titre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #000; /* Couleur du trait */
+  margin: 20px 0; /* Marge au-dessus et en-dessous du trait */
+}

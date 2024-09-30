@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Broadway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cooper+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
+
+:root{
+    --first-pink: #E3117C;
+    --second-pink: #E790AE;
+    --third-pink: #EDB8C5;
+
+    --first-blue: #1B386F;
+    --second-blue: #5E7A9E;
+    --third-blue: #8BA6C1;
+
+    --base: #EBE6E9;
+
+    --marge: 225px;
+    --marge-responsive:8vw;
+
+
+    --font-title: 'Broadway', cursive;
+    --font-navbar: 'Signika Negative', sans-serif;
+    --font-corps: 'Cooper Black', sans-serif;
+    --font-label: 'Signika Negative', sans-serif;
+    --font-input: 'Cooper Black', sans-serif;
+    --font-link: 'Signika Negative', sans-serif;
+}

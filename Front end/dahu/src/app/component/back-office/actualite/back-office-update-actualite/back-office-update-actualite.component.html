@@ -1,0 +1,23 @@
+<div class="total">
+
+    <app-menu-backoffice [page]="'actualite'"></app-menu-backoffice>
+  
+  
+    <div class="container">
+  
+      <section class="premiere">
+        <div class="search-container">
+          <h1 class="title"> Mettre à jour une actualité</h1>
+        </div>
+        <div class="add-actuality">
+          <button class="btn btn-primary" type="button" (click)="goBack()"> Retour</button>
+        </div>
+      </section>
+  
+      <ng-container *ngIf="actualiteObservable | async as actualiteData">
+        <app-back-office-form-actualite [actualite]="actualiteData" [is_create]="false"></app-back-office-form-actualite>
+      </ng-container>
+  
+    </div>
+  </div>
+  

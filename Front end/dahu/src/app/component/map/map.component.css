@@ -1,0 +1,62 @@
+.map-container {
+  display: flex;
+}
+
+.map {
+  flex: 1;
+}
+
+h2, button{
+  font-family: var(--font-navbar);
+}
+p{
+  font-family: var(--font-corps);
+}
+
+.marker-info {
+  background-color: var(--third-pink);
+  flex: 0 0 300px;
+  /* Définissez la largeur de la div d'informations des markers selon vos besoins */
+  padding: 10px;
+  border-left: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.bouton-detail{
+  background-color: var(--first-pink);
+  color: var(--base);
+  border: none;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  border-radius: 20px;
+}
+
+.titre-detail{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.img-detail{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.adresse-detail{
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.score-detail{
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+

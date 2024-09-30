@@ -1,0 +1,60 @@
+<section id="menu">
+    <div class="menu">
+        <button class="btn btn-light" type="button" (click)="backToSite()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+              </svg>
+            Retour sur le site</button>
+        <div id="switch-div">
+            <label class="switch" (click)="switchDahu()">
+                <input type="checkbox" [(ngModel)]="isChecked">
+                <span class="slider"><img [src]="'../../../assets/' + logo" alt="logo"></span>
+            </label>
+        </div>
+
+        <div>
+            <p *ngIf="page=='general' else sinonG" class="active" style="color: {{colors[0]}};" (click)="goToDasboard()">Général</p>
+            <ng-template #sinonG>
+                <p class="desactive" style="color: {{colors[0]}};" (click)="goToDasboard()">Général</p>
+            </ng-template>
+        </div>
+        <div>
+            <p *ngIf="page=='activite' else sinonActi" class="active" style="color: {{colors[0]}}" (click)="goToListeActivite()">Activités</p>
+            <ng-template #sinonActi>
+                <p class="desactive" (click)="goToListeActivite()">Activités</p>
+            </ng-template>
+        </div>
+        <!-- <div>
+            <p *ngIf="page=='parcours' else sinonP" class="active" style="color: {{colors[0]}};">Parcours</p>
+            <ng-template #sinonP>
+                <p class="desactive">Parcours</p>
+            </ng-template>
+        </div> -->
+        <div>
+            <p *ngIf="page=='actualite' else sinonActu" class="active" style="color: {{colors[0]}}" (click)="goToListeActualite()">Actualités</p>
+            <ng-template #sinonActu>
+                <p class="desactive" (click)="goToListeActualite()">Actualités</p>
+            </ng-template>
+        </div>
+        <div>
+            <p *ngIf="page=='theme' else sinonT" class="active" style="color: {{colors[0]}};" (click)="goToListeTheme()">Themes</p>
+            <ng-template #sinonT>
+                <p class="desactive" style="color: {{colors[0]}};" (click)="goToListeTheme()">Themes</p>
+            </ng-template>
+        </div>
+        <div>
+            <p *ngIf="page=='avis' else sinonU" class="active" style="color: {{colors[0]}};">Avis</p>
+            <ng-template #sinonU>
+                <p class="desactive" (click)="goToListeAvis()">Avis</p>
+            </ng-template>
+        </div>
+        <div>
+            <p *ngIf="page=='pictos' else sinonPi" class="active" style="color: {{colors[0]}}" (click)="goToListePictos()">Pictogrammes</p>
+            <ng-template #sinonPi>
+                <p class="desactive" (click)="goToListePictos()">Pictogrammes</p>
+            </ng-template>
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,137 @@
+section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #ececec;
+  margin-left: 20%;
+}
+
+
+section.deuxieme {
+  padding: 25px;
+  margin-top: 20px;
+  display: flex;
+}
+
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.coteacote input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 500px;
+}
+
+div.pictograme {
+  background-color: #ffffff;
+  margin-left: auto; /* This will center it if justify-content is flex-end */
+  height: 300px;
+  width: 350px;
+  margin-top: 30px;
+  border: 2px solid #ccc;
+}
+
+div.picto img {
+  margin-left: 10px;
+  width: 50px
+}
+
+section.troisieme .description textarea {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+  min-height: 300px;
+}
+
+section.troisieme .descriptioncourte textarea {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+.pictograme {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.picto {
+  flex-basis: calc(33.33% - 10px);
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: solid 3px black ;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-right: 5px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.label-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.add-activity {
+  margin-top: 10px;
+  text-align: end;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+select {
+  padding: 5px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.upload {
+  background-color: #ffffff ;
+}
+
+.picto_div{
+  margin-left: 2em;
+}
+
+
+
+
+

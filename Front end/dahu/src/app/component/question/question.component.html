@@ -1,0 +1,70 @@
+<div class="questions_publies">
+    <div class="contenu">
+        <div class="individu">
+            <span class="pseudo">Laurent.O</span>
+            <span class="date">18 octobre 2023</span>
+        </div>
+        <div class="question" [class.show-response]="showResponses">
+            <span>Ce resto est bien fréquenté ?</span>
+        </div>
+        <div class="case_rep">
+            <input type="text" placeholder="Répondre">
+        </div>
+        <div class="reponse" [style.display]="showResponses ? 'flex' : 'none'">
+            <div class="petite_case">
+                <div class="individu">
+                    <span class="pseudo">Michael. R</span>
+                    <span class="date">18 octobre 2023</span>
+                </div>
+                <div class="question">
+                    <span>Oui</span>
+                </div>
+                <div class="case_rep">
+                    <input type="text" placeholder="Répondre">
+                </div>
+            </div>
+        </div>
+        <button *ngIf="!showResponses" class="toggle-response-button" (click)="toggleResponse()" >Afficher les réponses </button>
+        <button *ngIf="showResponses" class="toggle-response-button" (click)="toggleResponse()">Masquer les réponses</button>
+    </div>
+    <div class="contenu">
+        <div class="individu">
+            <span class="pseudo">Laurent.O</span>
+            <span class="date">18 octobre 2023</span>
+        </div>
+        <div class="question" [class.show-response]="showResponses">
+            <span>Ce resto est bien fréquenté ?</span>
+        </div>
+        <div class="case_rep">
+            <input type="text" placeholder="Répondre">
+        </div>
+        <div class="reponse" [style.display]="showResponses ? 'flex' : 'none'">
+            <div class="petite_case">
+                <div class="individu">
+                    <span class="pseudo">Michael. R</span>
+                    <span class="date">18 octobre 2023</span>
+                </div>
+                <div class="question">
+                    <span>Oui</span>
+                </div>
+                <div class="case_rep">
+                    <input type="text" placeholder="Répondre">
+                </div>
+            </div>
+        </div>
+        <button *ngIf="!showResponses" class="toggle-response-button" (click)="toggleResponse()" >Afficher les réponses </button>
+        <button *ngIf="showResponses" class="toggle-response-button" (click)="toggleResponse()">Masquer les réponses</button>
+    </div>
+</div>
+<div class="espace"></div>
+<div class="question-perso">
+    <div class="container">
+        <div class="row">
+            <div class="note_left">
+                <span>Entrez une question : </span>
+                <input type="text" placeholder="Ajouter une question ici"  name="avisInput">
+            </div>
+        </div>
+        <button type="submit" >Soumettre</button>
+    </div>
+</div>

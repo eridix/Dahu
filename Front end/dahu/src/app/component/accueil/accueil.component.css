@@ -1,0 +1,359 @@
+
+.body section{
+    padding: 100px var(--marge-responsive);
+}
+.body{
+    position: relative;
+    overflow: hidden;
+}
+
+p{
+    font-family: var(--font-corps);
+}
+
+h2{
+    font-family: var(--font-title);
+    font-size: xx-large;
+    font-weight: bold;
+}
+.voir-plus{
+    font-family: var(--font-link);
+}
+
+/* ----------------------------------- Bannière ----------------------------------- */
+
+.banner{
+    margin-top: 0;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 13;
+}
+.banner p{
+    position: absolute;
+    top: 60vh;  
+    max-width:70%;
+    border-radius: 0 150px 150px 0;
+    font-size: 3vw;
+    color: var(--base);
+    padding: 15px 30px;
+    font-family: var(--font-title);
+    font-weight: bold;
+}
+
+/* flèches de déplacement */
+.fleche{
+    z-index: 11;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: arrowAnimation 1.5s infinite ease-in-out;
+    
+}
+
+.fleche:hover{
+    cursor: pointer;
+}
+
+@keyframes arrowAnimation {
+    0%, 100% {
+        bottom: 10px;
+    }
+    50% {
+        bottom: 30px;
+    }
+}
+
+/*Pour petit écran*/
+
+@media (max-width: 992px){
+    .banner p{
+        max-width:100%;
+        font-size: 6vw;
+        padding: 15px;
+        border-radius: 0;
+    }
+}
+
+
+
+/* ----------------------------------- Informations ----------------------------------- */
+
+#infos{
+    position: relative;
+    font-size: larger;
+    height: fit-content;
+    padding-bottom: 150px;
+}
+#infos p{
+    width: 100%;
+}
+.chiffres{
+    position: relative;
+    font-size: medium;
+}
+.chiffre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    font-size: larger;
+    font-family: var(--font-corps);
+}
+.chiffre span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    color: var(--base);
+    height: 120px;
+    width: 120px;
+    cursor: default;
+}
+.chiffre p{
+    text-align: center;
+}
+
+
+#chiffre1{
+    top: 100px;
+}
+#chiffre2{
+    top: 400px;
+}
+#chiffre3{
+    top: -50px;
+}
+#chiffre4{ 
+    top: 250px;
+}
+
+@media (max-width: 992px){
+    .body section{
+        padding: 100px 10px
+    }
+
+    #chiffre1, #chiffre3{
+        top: 0;
+        left: 25%;
+        transform: translateX(-50%);
+    }
+    #chiffre2, #chiffre4{
+        top: 40%;
+        right: 25%;
+        transform: translateX(50%);
+    }
+
+    #infos p{
+        font-size: medium;
+    }
+    .chiffres span{
+        height: 80px;
+        width: 80px;
+        font-size: 1.2em;
+    }
+    .chiffre p{
+        width: 32vw;
+    }
+    .chiffres{
+        display: flex;
+        height: 300px;
+    }
+}
+
+
+
+
+
+/* ----------------------------------- sponsors ----------------------------------- */
+
+#sponsors{
+    z-index: 10;
+    padding-top: 50px ;
+    padding-bottom: 100px ;
+}
+
+#sponsors, #newspaper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sponsors .container{
+    margin: 0;
+    margin-top: 20px;
+}
+
+#sponsors .row{
+    width: 100%;
+}
+
+#sponsors img{
+    max-width: 80%;
+}
+#sponsors div{
+    display: flex;
+    justify-content: center;
+}
+
+/* ----------------------------------- Actualités ----------------------------------- */
+#newspaper{
+    margin: 100px 0;
+}
+
+
+#newspaper .row{
+    display: flex;
+    justify-content: center;
+}
+#newspaper .col{
+    max-width: 280px;
+}
+
+
+#newspaper .img-div{
+    height: 200px;
+    object-fit: fill;
+}
+#newspaper img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.card-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    white-space: normal;
+    font-family: var(--font-navbar);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#newspaper .card-body{
+    height: 230px;
+    position: relative;
+}
+#newspaper .card-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    white-space: normal;
+}
+#newspaper .card a{
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    font-weight: bold;
+}
+
+#newspaper .card a{
+    color: var(--second-pink);
+    transition: 0.2s;
+}
+#newspaper .card-body svg{
+    fill: var(--second-pink);
+    transition: 0.2s;
+}
+#newspaper .card a:hover{
+    color: var(--first-pink);
+}
+#newspaper .card a:hover svg{
+    fill: var(--first-pink);
+}
+
+#goActus{
+    margin-top: 20px;
+}
+
+.img-div{
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.img-div div{
+    position: absolute;
+    color: var(--base);
+    fill: var(--base);
+    opacity: 0;
+    transition: 0.3s;
+}
+.img-div img{
+    position: absolute;
+    transition: 0.3s;
+}
+
+.img-div:hover div{
+    opacity: 1;
+    transition: 0.3s;
+}
+.img-div:hover img{
+    filter: brightness(50%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.img-div:hover{
+    cursor: pointer;
+}
+
+
+
+#dahuris{
+    position: relative;
+    border: 0 solid;
+}
+#rond{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    top: 0;
+    background-color: #fff;
+}
+
+
+
+/* ----------------------------------- Animations ----------------------------------- */
+
+/*Défilement par scroll*/
+
+.animate-left {
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+}
+.animate.is-visible {
+    opacity: 1;
+    transform: translate(0);
+}
+.animate-right {
+    transform: translateX(200px);
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+}
+
+.p{
+    position: relative;
+}
+
+/*Apparition dahu*/
+
+.funnyDiv{
+    position: fixed;
+    z-index: 14;
+    transition: transform 0.3s ease-in-out;
+    :hover{
+        cursor: pointer;
+    }
+}
+.funnyDiv img{
+    max-height: 550px;
+}

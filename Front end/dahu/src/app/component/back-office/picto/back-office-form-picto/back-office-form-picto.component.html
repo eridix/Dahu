@@ -1,0 +1,40 @@
+<form [formGroup]="pictoForm">
+    <section class="deuxieme">
+      <div class="coteacote">
+        <div class="data">
+          <label>Nom du pictogramme</label>
+          <input type="text" formControlName="nom">
+          <div *ngIf="pictoForm.get('nom')?.invalid &&
+          (pictoForm.get('nom')?.dirty || pictoForm.get('nom')?.touched)"
+          class="alert alert-danger">
+          <div *ngIf="pictoForm.get('nom')?.errors?.['required']">
+            Le nom est nécessaire.
+          </div>
+          <div *ngIf="pictoForm.get('nom')?.errors?.['minlength']">
+            Le nom doit faire au moins 3 caractères.
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    
+  
+  
+    <section class="quatrième">
+      <div class="imageprincipal">
+        <label for="upload-button">Image </label>
+        <img src="{{picto.img}}" alt="" [width]="150"><br>
+        <input formControlName="image" type="file" name="fileToUpload" id="upload-buttons">
+        <span id="file-names"></span>
+      </div>
+      
+
+        
+      <div class="add-picto">
+        <button class="btn btn-primary" type="button" (click)="create()" *ngIf="is_create">Créer le pictogramme</button>
+        <button class="btn btn-primary" type="button" (click)="update()" *ngIf="!is_create">Mettre à jour le pictogramme</button>
+      </div>
+    </section>
+  </form>
+  

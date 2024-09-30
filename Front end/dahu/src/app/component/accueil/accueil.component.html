@@ -1,0 +1,119 @@
+<app-nav-bar></app-nav-bar>
+<div class="banner" style="background-image: url(../../../assets/{{imageAccueil}});" id="banner">
+    <p data-test="welcome-message" style="background-color: {{color[3]}}">Le guide des bonnes adresses de Grenoble !</p>
+    <a class="fleche" (click)="scrollToInfos()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="var(--base)" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+        </svg>
+    </a>
+</div>
+<div class="body">
+    <section id="infos">
+        <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-7">
+                <div class="divAnimate">
+                    <h2 class="animate animate-left">L'association du Dahu</h2>
+                </div><br><br>
+                <div class="p">
+                    <p class="animate animate-left">
+                        Présent à Grenoble depuis 43 ans, Le Guide du Dahu est le média Isérois de référence en termes de restaurants, sorties et nouveautés.</p>
+                    <p class="animate animate-left">
+                        Née en 1980 Le Dahu est une association étudiante qui partage, à travers son guide publié à 10 000 exemplaires,
+                        les bons plans culinaires et culturels de Grenoble et ses alentours.</p>
+                    <p class="animate animate-left">
+                        Depuis 2009, l’association a lancé son petit frère, le Dahu des Neiges, qui met en avant les bons plans des stations de ski des Alpes,
+                        édité lui aussi à 10 000 exemplaires. Chaque année deux événements pour le lancement de chacun des guides ont lieu.</p>
+                    <p class="animate animate-left">En octobre, le lancement du guide du Dahu rassemble 2 000 personnes sur l’une des places de la ville.
+                        En décembre, le Dahu des Neiges dévoile son nouveau guide sur la station de l’Alpes d’Huez avec plus de 1000 participants.</p>
+                </div>
+            </div>
+            <div class="col-0 col-lg-1"></div>
+            <div class="col-6 col-lg-2 chiffres divAnimate">
+                <div class="chiffre animate animate-right" id="chiffre1">
+                    <span class="badge badge-primary rounded-circle shadow-lg" style="background-color: {{color[0]}};">10K</span>
+                    <p>Guides du Dahu des Neiges</p>
+                </div>
+                <div class="chiffre animate animate-right" id="chiffre2">
+                    <span class="badge badge-primary rounded-circle shadow-lg" style="background-color: {{color[1]}};">2K</span>
+                    <p>2000 personnes présentes au lancement</p>
+                </div>
+              </div>
+              <div class="col-6 col-lg-2 chiffres divAnimate">
+                <div class="chiffre animate animate-right" id="chiffre3">
+                    <span class="badge badge-primary rounded-circle shadow-lg" style="background-color: {{color[1]}};">10K</span>
+                    <p>Guides du Dahu</p>
+                </div>
+                <div class="chiffre animate animate-right" id="chiffre4">
+                    <span class="badge badge-primary rounded-circle shadow-lg" style="background-color: {{color[2]}};">43</span>
+                    <p>Depuis 43 ans</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <section id="sponsors" style="background-color: {{color[1]}};">
+        <h2 class="animate animate-left">Nos sponsors !</h2>
+        <div class="animate animate-right container">
+            <div class="row">
+                <div class="col col-3">
+                    <img src="../../../assets/dahuDesNeiges.png" alt="">
+                </div>
+                <div class="col col-3">
+                    <img src="../../../assets/dahu2.png" alt="">
+                </div>
+                <div class="col col-3">
+                    <img src="../../../assets/dahu.png" alt="">
+                </div>
+                <div class="col col-3">
+                    <img src="../../../assets/dahuDesNeiges2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="newspaper">
+        <h2>Les actus !<br><br></h2>
+        <div class="container">
+            <div class="row">
+                <div class="col col-12 col-lg-4 col-xl-4 col-xxl-3" *ngFor="let actu of actualites.slice(0, 4)">
+                    <div class="card" >
+                        <div class="img-div" (click)="goToArticle(actu.id)">
+                            <img src="{{actu.image}}" class="card-img-top" alt="">
+                            <div class="voir-plus">
+                                Voir plus
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">{{actu.titre}}</h4>
+                            <p class="card-text">{{actu.description}}</p>
+                            <a class="voir-plus" style="cursor: pointer;" (click)="goToArticle(actu.id)">
+                                Voir plus
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="voir-plus" style="cursor: pointer;" (click)="goActualite()" id="goActus">
+            Toutes les actus
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+            </svg>
+        </a>
+    </section>
+    <div id="funnyDivHaut" class="funnyDiv"><img src="../../../assets/{{dahuComming}}" alt="" id="funnyDahuHaut" (click)="switchDahu()"></div>
+    <div id="funnyDivBas" class="funnyDiv"><img src="../../../assets/{{dahuComming}}" alt="" id="funnyDahuBas" (click)="switchDahu()"></div>
+</div>
+
+<app-footer></app-footer>
+<a *ngIf="showGoUp" (click)="scrollToBanner()" class="fleche position-fixed">
+    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" [style.fill]="color[0]" class="bi bi-caret-up-fill fixed" viewBox="0 0 16 16">
+        <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+    </svg>
+</a>

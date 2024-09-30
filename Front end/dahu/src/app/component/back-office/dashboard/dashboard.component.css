@@ -1,0 +1,60 @@
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 5%;
+  color: #ffffff;
+  font-size: 55px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.square {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(#818181, #e8e2e2);
+  margin: 10px;
+  display: flex;
+  justify-content: center; /* Centre le contenu horizontalement */
+  align-items: center; /* Centre le contenu verticalement */
+  text-align: center; /* Centre le texte horizontalement */
+  font-size: 18px; /* Taille de la police */
+  font-weight: bold; /* Met le texte en gras */
+transition: transform 0.3s; /* Animation de transition */
+}
+
+.square:hover {
+  transform: scale(1.1); /* Zoom de 10% lors du survol */
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assure que l'image couvre toute la div */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(50%);
+}

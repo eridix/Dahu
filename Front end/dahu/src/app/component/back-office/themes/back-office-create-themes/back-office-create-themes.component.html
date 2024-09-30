@@ -1,0 +1,19 @@
+<div class="total">
+
+  <app-menu-backoffice [page]="'theme'"> </app-menu-backoffice>
+
+
+  <div class="container">
+    <section class="premiere">
+      <div class="title-container">
+        <h1 class="title">Ajouter un thème</h1>
+        <div class="add-activity">
+          <button class="btn btn-primary" type="button" (click)="goBack()">Retour</button>
+        </div>
+
+      </div>
+      <div class="divider"></div>
+    </section>
+    <app-back-office-form-theme *ngIf="theme" [theme]="theme"  [is_create]="true"></app-back-office-form-theme>
+  </div>
+</div>

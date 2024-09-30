@@ -1,0 +1,38 @@
+<app-nav-bar></app-nav-bar>
+
+<div id="switch-div">
+    <label class="switch">
+        <input type="checkbox" [(ngModel)]="isChecked" (click)="result()">
+        <span class="slider">
+            <p class="switch-item" style="background-color: {{color[0]}};">{{chosen_item}}</p>
+            <div style="background-color: {{color[1]}};">
+                <p>Liste</p>
+                <p>Map</p>
+            </div>
+        </span>
+    </label>
+</div>
+
+<div class="page">
+    <div class="cadre-filtre col col-3" style="background-color: {{color[1]}};">
+        <app-filtres></app-filtres>
+    </div>
+
+    <div class="cadre-result col col-9" style="background-color: {{color[1]}};">
+        <div class="listeResult" *ngIf="printListe">
+            <div class="container">
+                <div class="row">
+                    <app-activite-detail class="col-12 col-sm-6 col-lg-4 col-xl-3" *ngFor="let activite of activites" [activite]="activite"></app-activite-detail>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="mapResult" *ngIf="!printListe">
+    
+        <app-map [filtreService]="filtreService"></app-map>
+    </div>
+</div>
+
+
+
